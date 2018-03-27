@@ -20,8 +20,8 @@ hash_symbols = {}
 k=0
 j=0
 while k<len(sorted_counted_of_words):
-    h = "~"+str(j)
-    if(len(sorted_counted_of_words[k][0])>= len(h) and sorted_counted_of_words[k][1] > 4):
+    h = str(j)
+    if(len(sorted_counted_of_words[k][0])>= len(h) and sorted_counted_of_words[k][1] > 2):
         hash_symbols[sorted_counted_of_words[k][0]] = h
         j+=1
     k+=1
