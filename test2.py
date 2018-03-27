@@ -1,7 +1,7 @@
 import operator
 string = "hello how are you my friend friends friend hello"
 word_list=[]
-fo = open("test.txt" , "r")
+fo = open("bigfile.txt" , "r")
 #print(fo.read())
 
 word_list = fo.read().split()
@@ -21,14 +21,14 @@ k=0
 j=0
 while k<len(sorted_counted_of_words):
     h = "~"+str(j)
-    if(len(sorted_counted_of_words[k][0])>= len(h)):
+    if(len(sorted_counted_of_words[k][0])>= len(h) and sorted_counted_of_words[k][1] > 4):
         hash_symbols[sorted_counted_of_words[k][0]] = h
         j+=1
     k+=1
     h=""
 print(hash_symbols)
 fo.close()
-fo2 = open("test.txt","r")
+fo2 = open("bigfile.txt","r")
 #print(fo2.read())
 filedata = fo2.read().split()
 print("file data")
@@ -50,4 +50,7 @@ fo4 = open("test2.txt","r")
 print("file")
 print(fo4.read())
 fo_hash = open("hash_file.txt","w")
-fo_hash.write(str(hash_symbols))
+#fo_hash.write(str(hash_symbols))
+for k in hash_symbols:
+    fo_hash.write(k)
+    fo_hash.write(hash_symbols[k])
