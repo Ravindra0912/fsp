@@ -36,11 +36,12 @@ print(filedata)
 s=""
 for elem in filedata:
     #print(elem)
+
     if(elem in hash_symbols.keys()):
         elem = hash_symbols[elem]
-        s = s + hash_symbols[elem]
+        s = s + elem+" "
     else:
-        s = s+elem
+        s = s+ elem +" "
 fo2.close()
 fo3 = open("test2.txt","w")
 fo3.write(s)
@@ -48,3 +49,5 @@ fo3.close()
 fo4 = open("test2.txt","r")
 print("file")
 print(fo4.read())
+fo_hash = open("hash_file.txt","w")
+fo_hash.write(str(hash_symbols))
