@@ -13,9 +13,9 @@ class Decompressor():
         for i in hashFile.readlines():
             e = i.split()
             self.hash_pairs.append(e)
-            print("this is a hash_pair",e,"forline",i)
+          #  print("this is a hash_pair",e,"forline",i)
          #   print(self.hash_pairs)
-        print("hashpairs",self.hash_pairs)
+      #  print("hashpairs",self.hash_pairs)
 
     #converting the hash file to dictionary via list
 
@@ -25,7 +25,7 @@ class Decompressor():
             self.hash_d[self.hash_pairs[i][1]] = self.hash_pairs[i][0]
             i+=1
         # print("hp",self.hash_pairs,"hd",self.hash_d)
-        print("hashd",self.hash_d)
+       # print("hashd",self.hash_d)
 
     # final decompression by replacing keys with words and adding new line character
 
@@ -34,7 +34,7 @@ class Decompressor():
         decomp = open("decomp.txt","w")
         handle_comp = open("test2.txt", "r")
         comp = handle_comp.read().split()
-        print("comp",comp)
+      #  print("comp",comp)
         for i in comp:
             if i !='~' and i in self.hash_d.keys():
                 s= s+ self.hash_d[i] +  " "
@@ -45,10 +45,10 @@ class Decompressor():
                 decomp.write("\n")
                 s=""
 
-d = Decompressor()
+#d = Decompressor()
 #d.read_file()
-d.map_hash()
-d.new_hash()
-d.replace_keys_with_word_in_compressed_file()
+#d.map_hash()
+#d.new_hash()
+#d.replace_keys_with_word_in_compressed_file()
 
 # d.decompressed_file()
