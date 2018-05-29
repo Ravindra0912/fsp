@@ -60,7 +60,7 @@ class Compressor:
            # self.s = self.s + "pch"+" "
             self.para.append(self.s)
        #     self.para.append((" # ").strip())
-        print("para",self.para)
+  #      print("para",self.para)
         para1 = set(self.para)
         fo3 = open("test2.txt", "w")
 
@@ -70,8 +70,8 @@ class Compressor:
             fo3.write(" ")
         fo3.close()
         fo4 = open("test2.txt", "r")
-        print("file")
-        print(fo4.read())
+       # print("file")
+        #print(fo4.read())
         fo4.close()
 
 
@@ -86,9 +86,9 @@ class Compressor:
             self.fo_hash.write("\n")
         self.fo_hash.close()
 
-c = Compressor()
-c.read_file()
-c.get_sorted_tuple()
-c.make_hash()
-c.create_compressed_file()
-c.create_hash_table()
+#c = Compressor()
+#c.read_file()
+#c.get_sorted_tuple()
+#c.make_hash()
+#c.create_compressed_file()
+#c.create_hash_table()
